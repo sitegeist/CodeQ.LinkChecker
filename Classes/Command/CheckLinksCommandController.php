@@ -203,7 +203,6 @@ class CheckLinksCommandController extends CommandController
                 } catch (OriginUrlException $originUrlException) {
                     $this->outputFormatted("<error>{$originUrlException->getMessage()}</error>");
                     $this->outputFormatted("<error>The configured site domain $url could not be reached, please check if the URL is correct.</error>");
-                    return;
                 }
             } catch (\InvalidArgumentException $exception) {
                 $this->outputLine('ERROR:  ' . $exception->getMessage());
