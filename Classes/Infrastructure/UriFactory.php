@@ -17,7 +17,7 @@ class UriFactory
     public function createFromDomain(Domain $domain): UriInterface
     {
         $uri = new Uri();
-        $scheme = $domain->getScheme() ?: 'http';
+        $scheme = $domain->getScheme() ?: 'https';
         $uri = $uri->withScheme($scheme);
         $uri = $uri->withHost($domain->getHostname());
         if ($domain->getPort() !== null) {
